@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.liwy.easyindictor.MainActivity">
+
+    <com.liwy.easyindictor.TabView
+        android:id="@+id/tabview"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:textSize="10sp"
+        android:background="@color/colorPrimary"
+        android:text="聊天"></com.liwy.easyindictor.TabView>
+
+    <!--<com.liwy.easyindictor.TabView-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:textSize="10sp"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:textColor="@color/colorAccent"-->
+        <!--android:text="空间"></com.liwy.easyindictor.TabView>-->
+
+    <!--<com.liwy.easyindictor.TabView-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:textSize="10sp"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:text="设置"></com.liwy.easyindictor.TabView>-->
+    
+    <com.liwy.easyindictor.EasyIndicator
+        android:id="@+id/indictor"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="49dp"></com.liwy.easyindictor.EasyIndicator>
+</LinearLayout>
