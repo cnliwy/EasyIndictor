@@ -1,7 +1,6 @@
 # EasyIndictor 使用简介
-##效果图如下
-![avatar](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot.png)
-##代码
+##导航栏效果图
+![avatar](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot/pic1.png)</br>
 ##方式一：
 ```
         indicator = (EasyIndicator)findViewById(R.id.indictor);
