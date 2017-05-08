@@ -14,7 +14,7 @@ import android.widget.Button;
  * Created by liwy on 2017/5/7.
  */
 
-public class TabView extends Button {
+public class TabView extends android.support.v7.widget.AppCompatButton {
     private Bitmap bitmap;
     private int index;          //tabview的index位置
     private int distance;   // 文字和图片的间隔

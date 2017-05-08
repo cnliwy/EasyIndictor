@@ -1,6 +1,7 @@
 package com.liwy.easyindictor;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -96,30 +97,42 @@ public class EasyIndicator extends LinearLayout implements ITabIndicator{
         for (int i = 0; i < tabCount; i++) {
             final TabView child = (TabView)mTabLayout.getChildAt(i);
             final boolean isSelected = (i == item);
-            child.setSelected(isSelected);
+            if (config.isShowLine())child.setShowLine(false);
+            //设置默认背景色
+            if (config.getBgColorNor() != 0) child.setBackgroundColor(getColorIntByResid(config.getBgColorNor()));
+            if (tabsList.get(i).getResIconNormal() != 0)
+                child.setIcon(tabsList.get(i).getResIconNormal());
+            if (config.getTextColorNor() != 0)
+                child.setTextColor(getColorIntByResid(config.getTextColorNor()));
             if (isSelected) {
                 if (config.isShowLine())child.setShowLine(true);
                 //设置选中后的背景色
-                if (config.getBgColorSel() != 0)
-                    child.setBackgroundColor(getResources().getColor(config.getBgColorSel()));
+                if (config.getBgColorSel() != 0)child.setBackgroundColor(getColorIntByResid(config.getBgColorSel()));
                 //设置选中后的背景图片
                 if (tabsList.get(i).getResIconSelected() != 0)
                     child.setIcon(tabsList.get(i).getResIconSelected());
                 if (config.getTextColorSel() != 0)
-                    child.setTextColor(getResources().getColor(config.getTextColorSel()));
-
-            }else{
-                if (config.isShowLine())child.setShowLine(false);
-                //设置默认背景色
-                if (config.getBgColorNor() != 0)
-                    child.setBackgroundColor(getResources().getColor(config.getBgColorNor()));
-                if (tabsList.get(i).getResIconNormal() != 0)
-                    child.setIcon(tabsList.get(i).getResIconNormal());
-                if (config.getTextColorNor() != 0)
-                    child.setTextColor(getResources().getColor(config.getTextColorNor()));
+                    child.setTextColor(getColorIntByResid(config.getTextColorSel()));
+                if (config.getLineColor() != 0)child.setLineColor(getColorIntByResid(config.getLineColor()));
             }
+
         }
     }
+
+
+    /**
+     * 根据资源获取色值
+     * @param colorResid
+     * @return
+     */
+    public int getColorIntByResid(int colorResid){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+           return getResources().getColor(colorResid, null);
+        } else {
+            return getResources().getColor(colorResid);
+        }
+    }
+
 
     @Override
     public void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
@@ -150,12 +163,6 @@ public class EasyIndicator extends LinearLayout implements ITabIndicator{
         tabView.setDistance(config.getDistance());
         tabView.setImgHeight(config.getImgHeight());
         tabView.setImgWidth(config.getImgWidth());
-//        if (resId != 0){
-//            tabView.setIcon(resId);
-//        }
-//        if (TabConfig.defTextColor != 0)
-//            tabView.setTextColor(getResources().getColor(TabConfig.defTextColor));
-
         childViews.add(index,tabView);
         int height = dip2px(getContext(),config.getTabHeight());
         mTabLayout.addView(tabView, new LayoutParams(0, height, 1));
