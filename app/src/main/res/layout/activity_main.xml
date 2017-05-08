@@ -7,37 +7,29 @@
     android:orientation="vertical"
     tools:context="com.liwy.easyindictor.MainActivity">
 
-    <com.liwy.easyindictor.TabView
-        android:id="@+id/tabview"
-        android:layout_marginTop="20dp"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:textSize="10sp"
-        android:background="@color/colorPrimary"
-        android:text="聊天"></com.liwy.easyindictor.TabView>
-
-    <!--<com.liwy.easyindictor.TabView-->
-        <!--android:layout_marginTop="100dp"-->
-        <!--android:layout_width="0dip"-->
-        <!--android:layout_height="49dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:textSize="10sp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:textColor="@color/colorAccent"-->
-        <!--android:text="空间"></com.liwy.easyindictor.TabView>-->
-
-    <!--<com.liwy.easyindictor.TabView-->
-        <!--android:layout_marginTop="100dp"-->
-        <!--android:layout_width="0dip"-->
-        <!--android:layout_height="49dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:textSize="10sp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:text="设置"></com.liwy.easyindictor.TabView>-->
-    
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="方式一"/>
     <com.liwy.easyindictor.EasyIndicator
         android:id="@+id/indictor"
         android:layout_width="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="49dp"></com.liwy.easyindictor.EasyIndicator>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="方式二"/>
+
+    <com.liwy.easyindictor.EasyIndicator
+        android:id="@+id/indictor2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="49dp"></com.liwy.easyindictor.EasyIndicator>
 </LinearLayout>

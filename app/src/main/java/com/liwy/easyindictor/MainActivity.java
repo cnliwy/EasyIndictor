@@ -9,16 +9,17 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     EasyIndicator indicator;
+    EasyIndicator indicator2;
     TabView tabView;
     List<TabBean> tabList = new ArrayList<>();
+    List<TabBean> tabList2 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initIndictor();
-        tabView = (TabView)findViewById(R.id.tabview);
-        tabView.setBackgroundColor(Color.WHITE);
+        initIndictor2();
     }
 
     private void initIndictor(){
@@ -30,21 +31,46 @@ public class MainActivity extends AppCompatActivity {
                 .setTextSize(16)                         // 设置文字的大小
                 .setBgColorNor(R.color.bg_nor)          // 设置默认的背景色
 //              .setBgColorSel(R.color.bg_sel)           // 设置选中后的背景色
-                .setImgWidth(30)                         // 设置图片宽度
-                .setImgHeight(30)                        // 设置图片高度
                 .setLineColor(R.color.colorAccent)     // 设置下划线颜色
                 .setShowLine(true)                      // 设置是否显示下划线
                 .builder();
         indicator.setConfig(config);
         // 设置图文导航栏（参数依次为：文字，初始图标，选中后图标）
-//        tabBeen.add(new TabBean("聊天",R.drawable.ic_slide_time,R.drawable.ic_slide_happy));
-//        tabBeen.add(new TabBean("空间",R.drawable.ic_slide_time,R.drawable.ic_slide_music));
-//        tabBeen.add(new TabBean("设置",R.drawable.ic_slide_time,R.drawable.ic_slide_set));
+//        tabList.add(new TabBean("聊天",R.drawable.ic_slide_time,R.drawable.ic_slide_happy));
+//        tabList.add(new TabBean("空间",R.drawable.ic_slide_time,R.drawable.ic_slide_music));
+//        tabList.add(new TabBean("设置",R.drawable.ic_slide_time,R.drawable.ic_slide_set));
         // 设置纯文字导航栏
         tabList.add(new TabBean("聊天"));
         tabList.add(new TabBean("空间"));
         tabList.add(new TabBean("设置"));
         // 将TabBean集合传入indictor，初始化导航栏子控件
         indicator.setTabs(tabList);
+    }
+
+    private void initIndictor2(){
+        indicator2 = (EasyIndicator)findViewById(R.id.indictor2);
+        TabConfig config = new TabConfig.Builder()
+                .setDistance(5)                          // 设置文字和图片的距离
+                .setTextColorNor(R.color.text_nor)      // 设置默认的文字颜色
+                .setTextColorSel(R.color.text_sel)      // 设置选中后的文字颜色
+                .setTextSize(13)                         // 设置文字的大小
+                .setBgColorNor(R.color.bg_nor)          // 设置默认的背景色
+//              .setBgColorSel(R.color.bg_sel)           // 设置选中后的背景色
+                .setImgWidth(30)                         // 设置图片宽度
+                .setImgHeight(30)                        // 设置图片高度
+                .setLineColor(R.color.colorAccent)     // 设置下划线颜色
+                .setShowLine(false)                      // 设置是否显示下划线
+                .builder();
+        indicator2.setConfig(config);
+        // 设置图文导航栏（参数依次为：文字，初始图标，选中后图标）
+        tabList2.add(new TabBean("聊天",R.drawable.ic_slide_time,R.drawable.ic_slide_happy));
+        tabList2.add(new TabBean("空间",R.drawable.ic_slide_time,R.drawable.ic_slide_music));
+        tabList2.add(new TabBean("设置",R.drawable.ic_slide_time,R.drawable.ic_slide_set));
+        // 设置纯文字导航栏
+//        tabList2.add(new TabBean("聊天"));
+//        tabList2.add(new TabBean("空间"));
+//        tabList2.add(new TabBean("设置"));
+        // 将TabBean集合传入indictor，初始化导航栏子控件
+        indicator2.setTabs(tabList2);
     }
 }
