@@ -1,6 +1,6 @@
 # EasyIndictor 使用简介
 ##导航栏效果图
-![avatar](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot/pic1.png)</br>
+![效果图](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot/pic1.png)</br>
 ##方式一：
 ```
         indicator = (EasyIndicator)findViewById(R.id.indictor);
