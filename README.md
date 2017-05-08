@@ -57,3 +57,14 @@
         indicator.setTabs(tabList);
         indicator.setTabAndViewPager(tabList,viewPager);
 ```
+点击事件:
+---
+```
+    // 也可以为导航栏里的item额外附加点击事件
+    indicator.setOnTabClickListener(new OnTabClickListener() {
+            @Override
+            public void onClick(TabView v) {
+                System.out.println("点击了tab" + v.getIndex());
+            }
+        });
+```

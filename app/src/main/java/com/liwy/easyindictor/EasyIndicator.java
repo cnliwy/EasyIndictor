@@ -198,61 +198,10 @@ public class EasyIndicator extends LinearLayout implements ITabIndicator{
             mPageListener.onPageScrollStateChanged(state);
         }
     }
-
-
-    public void setmOnTabClickListener(OnTabClickListener mOnTabClickListener) {
+    public void setOnTabClickListener(OnTabClickListener mOnTabClickListener) {
         this.mOnTabClickListener = mOnTabClickListener;
     }
 
-    public void setmOnClickListener(OnClickListener mOnClickListener) {
-        this.mOnClickListener = mOnClickListener;
-    }
-
-
-//    public class TabView extends android.support.v7.widget.AppCompatTextView{
-//        private int index;
-//        private int iconWidth =  dip2px(getContext(), TabConfig.tabImgWidth);
-//        private int iconHeight = dip2px(getContext(), TabConfig.tabImgHeight);
-//        public TabView(Context context) {
-//            this(context,null,0);
-//        }
-//
-//        public TabView(Context context, AttributeSet attrs, int defStyleAttr) {
-//            super(context, attrs, defStyleAttr);
-//        }
-//
-//        @Override
-//        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//            if (index > 0){
-//                super.onMeasure(MeasureSpec.makeMeasureSpec(tabWidth,MeasureSpec.EXACTLY),heightMeasureSpec);
-//            }
-//        }
-//
-//        public int getIndex() {
-//            return index;
-//        }
-//
-//        public void setIndex(int index) {
-//            this.index = index;
-//        }
-//
-//        public void setIcon(int resId){
-//            if (resId != 0){
-//                Drawable drawable;
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//                    drawable = getResources().getDrawable(resId,null);
-//                }else{
-//                    drawable = getResources().getDrawable(resId);
-//                }
-//                int padding = dip2px(getContext(),7);
-//                drawable.setBounds(0,padding,iconWidth,iconHeight + padding);
-//                setCompoundDrawables(null,drawable,null,null);
-//                setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
-//                setBackgroundColor(Color.TRANSPARENT);
-//            }
-//        }
-//    }
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.liwy.easyindictor.R.id.indictor;
+
 public class MainActivity extends AppCompatActivity {
     EasyIndicator indicator;
     EasyIndicator indicator2;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initIndictor(){
-        indicator = (EasyIndicator)findViewById(R.id.indictor);
+        indicator = (EasyIndicator)findViewById(indictor);
         TabConfig config = new TabConfig.Builder()
                 .setDistance(5)                          // 设置文字和图片的距离
                 .setTextColorNor(R.color.text_nor)      // 设置默认的文字颜色
@@ -45,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         tabList.add(new TabBean("设置"));
         // 将TabBean集合传入indictor，初始化导航栏子控件
         indicator.setTabs(tabList);
+        indicator.setOnTabClickListener(new OnTabClickListener() {
+            @Override
+            public void onClick(TabView v) {
+                System.out.println("点击了tab" + v.getIndex());
+            }
+        });
     }
 
     private void initIndictor2(){
