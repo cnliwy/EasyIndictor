@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="方式一"/>
+        android:text="文字导航栏"/>
     <com.liwy.easyindictor.EasyIndicator
         android:id="@+id/indictor"
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="方式二"/>
+        android:text="图文导航栏"/>
 
     <com.liwy.easyindictor.EasyIndicator
         android:id="@+id/indictor2"
