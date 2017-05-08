@@ -1,7 +1,7 @@
 # EasyIndictor 使用简介
 导航栏效果图</br>
 ---
-![效果图](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot/pic1.png)
+![效果图](https://github.com/cnliwy/EasyIndictor/blob/master/screenshot/pic1.png?raw=true)
 </br>
 方式一：
 ---
