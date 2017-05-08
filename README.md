@@ -3,7 +3,16 @@
 ---
 ![效果图](https://github.com/cnliwy/EasyIndictor/blob/master/screenshot/pic1.png?raw=true)
 </br>
-方式一：
+布局里引用
+---
+
+```
+<com.liwy.easyindictor.EasyIndicator
+        android:id="@+id/indictor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.liwy.easyindictor.EasyIndicator>
+```
+使用方式一：
 ---
 ```
         indicator = (EasyIndicator)findViewById(R.id.indictor);
@@ -30,7 +39,7 @@
         indicator.setTabs(tabList);
 ```
 
-方式二（绑定ViewPager）：
+使用方式二（绑定ViewPager）：
 ---
 ```
         indicator = (EasyIndicator)findViewById(R.id.indictor);
