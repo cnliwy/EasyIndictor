@@ -17,7 +17,7 @@
         android:id="@+id/indictor"
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
-        android:layout_height="49dp"></com.liwy.easyindictor.EasyIndicator>
+        android:layout_height="wrap_content"></com.liwy.easyindictor.EasyIndicator>
 
 
     <TextView
