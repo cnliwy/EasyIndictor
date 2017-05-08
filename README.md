@@ -1,7 +1,10 @@
 # EasyIndictor 使用简介
-##导航栏效果图
-![效果图](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot/pic1.png)</br>
-##方式一：
+导航栏效果图</br>
+---
+![效果图](https://github.com/cnliwy/EasyIndictor/tree/master/screenshot/pic1.png)
+</br>
+方式一：
+---
 ```
         indicator = (EasyIndicator)findViewById(R.id.indictor);
         //config配置信息可参考TabConfig.Builder类
@@ -27,7 +30,8 @@
         indicator.setTabs(tabList);
 ```
 
-##方式二（绑定ViewPager）：
+方式二（绑定ViewPager）：
+---
 ```
         indicator = (EasyIndicator)findViewById(R.id.indictor);
         //config配置信息可参考TabConfig.Builder类
